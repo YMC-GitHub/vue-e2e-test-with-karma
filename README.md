@@ -63,10 +63,15 @@ eof
 使用karma类库进行集成测试。
 
 01.通过karma-webpack实现让karma运行webpack。并使用karma-sourcemap-loader实现源码追踪。
+
 02.通过karma-mocha(Adapter for the Mocha testing framework)实现让karma运行mocha。
+
 03.通过karma-chai实现让karma运行chai。
+
 04.通过karma-spec-reporter使用类似于mocha的spec报告格式。
+
 05.通过karma-coverage使用Istanbul测覆盖率。覆盖率报告文件存放在工程根目录的`coverage`目录。
+
 06.通过karma-chrome-launcher实现在chrome浏览器中进行测试。
 
 用mocha这个测试框架，用chai这个断言库，对`e2e/**/*.spec.js`这些文件进行测试。

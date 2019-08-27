@@ -3,8 +3,11 @@
 #### what ?
 
 01.Karma is a test runner
+
 02.it launches browsers
+
 03.it runs tests
+
 04.and reports them back to us.
 
 #### why ?
