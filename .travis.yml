@@ -43,3 +43,9 @@ cache: npm
 services:
   # feat:集成测试
   - xvfb
+
+matrix:
+  fast_finish: true
+  # feat:允许失败
+  allow_failures:
+    - node_js: '6'
