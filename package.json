@@ -12,8 +12,8 @@
     "devlopment": "npm run dev",
     "production": "npm run build:pro",
     "test": "npm run test:e2e",
-    "test:tes:with-ci": "cross-env BABEL_ENV=test karma start --single-run",
-    "test:e2e": "cross-env BABEL_ENV=test karma start"
+    "test:tes:with-ci": "cross-env BABEL_ENV=test karma start ./test/e2e/karma.config.js --single-run",
+    "test:e2e": "cross-env BABEL_ENV=test karma start ./test/e2e/karma.config.js"
   },
   "dependencies": {
     "vue": "^2.5.11"

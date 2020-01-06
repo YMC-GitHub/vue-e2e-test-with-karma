@@ -1,44 +1,44 @@
 var path = require('path')
 var vueLoaderOptions = {
-	loaders: {
-		css: [
-			'vue-style-loader',
-			{
-				loader: 'css-loader',
-				options: {
-					sourceMap: true,
-				},
-			}
-		],
-		less: [
-			'vue-style-loader',
-			{
-				loader: 'css-loader',
-				options: {
-					sourceMap: true,
-				},
-			},
-			{
-				loader: 'postcss-loader',
-				options: {
-					sourceMap: true,
-				},
-			},
-			{
-				loader: 'less-loader',
-				options: {
-					strictMath: true,
-					strictUnits: true,
-					ieCompat: true,
-					sourceMap: true
-				}
-			}
-		],
-	},
-	postLoaders: {
-		html: 'babel-loader?sourceMap'
-	},
-	sourceMap: true,
+  loaders: {
+    css: [
+      'vue-style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+        },
+      }
+    ],
+    less: [
+      'vue-style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
+      {
+        loader: 'less-loader',
+        options: {
+          strictMath: true,
+          strictUnits: true,
+          ieCompat: true,
+          sourceMap: true
+        }
+      }
+    ],
+  },
+  postLoaders: {
+    html: 'babel-loader?sourceMap'
+  },
+  sourceMap: true,
 }
 module.exports = {
   entry: './src/main.js',
@@ -57,18 +57,18 @@ module.exports = {
         ],
       },
       {
-				test: /\.vue$/,
-				loader: 'vue-loader',
-				options: vueLoaderOptions
-			},
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				options: {
-					sourceMap: true,
-				},
-				exclude: /node_modules/,
-			},
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: vueLoaderOptions
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        options: {
+          sourceMap: true,
+        },
+        exclude: /node_modules/,
+      },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
@@ -80,7 +80,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, './src'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
@@ -93,7 +94,7 @@ module.exports = {
     hints: false
   },
   devtool: '#eval-source-map',
-  mode:"development"
+  mode: "development"
 }
 
 if (process.env.NODE_ENV === 'production') {

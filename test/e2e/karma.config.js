@@ -1,5 +1,5 @@
-let webpackConfig = require('./webpack.config.js')
 const path = require('path')
+let webpackConfig = require('../../webpack.config.js')//path.resolve(__dirname, '../../webpack.config.js')
 
 let useIE = false;
 // 哪些框架
@@ -8,17 +8,17 @@ frameworks.push('mocha', 'chai');
 
 // 哪些文件
 let files = [];
-files.push('e2e/**/*.spec.js');
+files.push('./test/e2e/**/*.spec.js');
 
 // 预处理器
 let preprocessors = {};
-preprocessors['e2e/**/*.spec.js'] = ['webpack', 'sourcemap']
+preprocessors['./test/e2e/**/*.spec.js'] = ['webpack', 'sourcemap']
 
 // 报告格式
 let reporters = [];
 reporters.push('spec', 'coverage');
 let coverageReporter = {
-  dir: './coverage',
+  dir: path.resolve(__dirname, './coverage'),
   reporters: [
     { type: 'lcov', subdir: '.' },
     { type: 'text-summary' }
@@ -73,7 +73,7 @@ module.exports = function (config) {
 
     // 哪些文件
     files,
-    //basePath: '',
+    basePath: path.resolve(__dirname, '../../'),
     //exclude: [],
 
     // 预处理器
@@ -96,7 +96,7 @@ module.exports = function (config) {
 
     // 集成模式
     // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
+    // if true, Karma captures browsers, runs the ./tests and exits
     singleRun: false,
 
     // 并发控制
@@ -104,7 +104,7 @@ module.exports = function (config) {
     concurrency: Infinity,
 
     // 监控模式
-    // enable / disable watching file and executing tests whenever any file changes
+    // enable / disable watching file and executing ./tests whenever any file changes
     autoWatch: true,
 
     // 记录类型

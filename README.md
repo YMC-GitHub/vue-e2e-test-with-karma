@@ -19,19 +19,19 @@ note: you can also test your project with [Vue CLI 3](https://cli.vuejs.org/)
 
 `karma.config.js`
 
-01.tell karma which file to  test ([karma.config.js](./karma.config.js#L9-#L11))
+01.tell karma which file to  test ([karma.config.js](/test.e2e//karma.config.js#L9-#L11))
 
-02.tell karma to process test files with karma-webpack and karma-sourcemap-loader ([karma.config.js](./karma.config.js#L13-#L15))
+02.tell karma to process test files with karma-webpack and karma-sourcemap-loader ([karma.config.js](/test.e2e//karma.config.js#L13-#L15))
 
-03.tell karma to use mocha framework with karma-mocha ([karma.config.js](./karma.config.js#L5-#L7))
+03.tell karma to use mocha framework with karma-mocha ([karma.config.js](./test/e2e/karma.config.js#L5-#L7))
 
-04.tell karma to use spec reporter likes mocha spec reporter with karma-spec-reporter ([karma.config.js](./karma.config.js#L19))
+04.tell karma to use spec reporter likes mocha spec reporter with karma-spec-reporter ([karma.config.js](./test/e2e/karma.config.js#L19))
 
-05.tell karma to use Istanbul  with karma-coverage ([karma.config.js](./karma.config.js#L19-L26))
+05.tell karma to use Istanbul  with karma-coverage ([karma.config.js](./test/e2e/karma.config.js#L19-L26))
 
-06.tell karma to test in browser chrome with karma-chrome-launcher ([karma.config.js](./karma.config.js#L31))
+06.tell karma to test in browser chrome with karma-chrome-launcher ([karma.config.js](./test/e2e/karma.config.js#L31))
 
-07.tell karma to use chai with karma-chai ([karma.config.js](./karma.config.js#L7))
+07.tell karma to use chai with karma-chai ([karma.config.js](/test.e2e//karma.config.js#L7))
 
 note: if use mocha , remember to install mocha lib . if you use chai,remember to install chai lib .
 
