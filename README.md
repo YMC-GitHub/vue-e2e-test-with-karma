@@ -1,4 +1,4 @@
-# vue-e22-test-with-karma
+# vue-e2e-test-with-karma
 
 ## desc
 
