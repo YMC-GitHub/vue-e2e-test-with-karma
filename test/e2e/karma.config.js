@@ -12,7 +12,7 @@ files.push('./test/e2e/**/*.spec.js');
 
 // 预处理器
 let preprocessors = {};
-preprocessors['./test/e2e/**/*.spec.js'] = ['webpack', 'sourcemap']
+preprocessors['./test/e2e/**/*.spec.js'] = ['webpack', 'sourcemap', 'coverage']
 
 // 报告格式
 let reporters = [];
@@ -74,7 +74,7 @@ module.exports = function (config) {
     // 哪些文件
     files,
     basePath: path.resolve(__dirname, '../../'),
-    //exclude: [],
+    //exclude: ['./src/**/*.(js|vue)'],
 
     // 预处理器
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
